@@ -1,0 +1,35 @@
+.root {
+    -fx-font-size: 12pt;
+    -fx-padding: 10px;
+}
+
+.title {
+    -fx-font: 1.7em System;
+    -fx-font-weight: bold;
+}
+
+Button {
+    -fx-font-size: 0.83em;
+}
+
+GridPane {
+    -fx-hgap: 1em;
+    -fx-vgap: 0.5em;
+}
+
+TextField, PasswordField {
+    -fx-pref-width: 9em;
+}
+
+ChoiceBox, DatePicker {
+    -fx-opacity: 1;
+    -fx-pref-width: 9em;
+}
+
+Line {
+    -fx-stroke-width: 5;
+}
+Circle {
+    -fx-stroke-width: 5;
+    -fx-fill: transparent;
+}

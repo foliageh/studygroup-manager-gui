@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.TableView?>
+
+<AnchorPane stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labproject.controllers.MainController">
+    <GridPane AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Button fx:id="localeButton" mnemonicParsing="false" text="%_locale"/>
+        <Label fx:id="username" GridPane.columnIndex="1"/>
+    </GridPane>
+    <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" text="%logout" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+    <GridPane layoutY="51.0" AnchorPane.leftAnchor="0.0">
+        <Label id="title" styleClass="title" text="%studyGroups"/>
+        <Button fx:id="createButton" mnemonicParsing="false" text="%create" GridPane.columnIndex="1"/>
+    </GridPane>
+    <GridPane layoutY="98.0" AnchorPane.leftAnchor="0.0">
+        <GridPane>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints valignment="BOTTOM" vgrow="ALWAYS"/>
+            </rowConstraints>
+            <Label id="filterByLabel" text="%filterBy" GridPane.rowIndex="0"/>
+            <GridPane GridPane.rowIndex="1">
+                <ChoiceBox fx:id="filterFieldChoiceBox"/>
+                <TextField fx:id="filterField" GridPane.columnIndex="1"/>
+            </GridPane>
+            <Button fx:id="resetFiltersButton" mnemonicParsing="false" text="%resetFilters" GridPane.halignment="RIGHT" GridPane.rowIndex="2"/>
+            <Button fx:id="reloadDataButton" mnemonicParsing="false" text="%reloadData" GridPane.rowIndex="3"/>
+            <Label fx:id="collectionInfo" GridPane.rowIndex="4"/>
+        </GridPane>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+            <Tab id="studyGroupsTab" text="%studyGroups">
+                <GridPane>
+                    <TableView fx:id="tableView" tableMenuButtonVisible="true"/>
+                    <GridPane GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS"/>
+                            <ColumnConstraints halignment="RIGHT"/>
+                            <ColumnConstraints halignment="RIGHT"/>
+                        </columnConstraints>
+                        <Button fx:id="removeLowerButton" mnemonicParsing="false" text="%removeLower" GridPane.halignment="RIGHT"/>
+                        <Button fx:id="removeGreaterButton" mnemonicParsing="false" text="%removeGreater" GridPane.columnIndex="1" GridPane.halignment="RIGHT"/>
+                        <Button fx:id="removeButton" mnemonicParsing="false" text="%remove" GridPane.columnIndex="2" GridPane.halignment="RIGHT"/>
+                    </GridPane>
+                </GridPane>
+            </Tab>
+            <Tab id="visualizationTab" text="%visualization">
+                <Pane fx:id="visualizationPane"/>
+            </Tab>
+        </TabPane>
+    </GridPane>
+</AnchorPane>

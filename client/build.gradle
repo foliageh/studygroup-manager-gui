@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.14'
+}
+
+group = 'com.labproject'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'com.labproject.app.App'
+
+dependencies {
+    implementation project(':common')
+}
+
+javafx {
+    version = "20"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+jar {
+    manifest.attributes (
+        'Main-Class': 'com.labproject.app.Main',
+    )
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+}

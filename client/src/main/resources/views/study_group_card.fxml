@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <Label fx:id="titleLabel" styleClass="title" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+   <GridPane layoutY="51.0" AnchorPane.leftAnchor="0.0">
+      <GridPane fx:id="fieldPane"/>
+      <GridPane fx:id="buttonPane" alignment="TOP_RIGHT" GridPane.rowIndex="1">
+         <Button fx:id="removeButton" mnemonicParsing="false" text="%remove"/>
+         <Button fx:id="updateButton" mnemonicParsing="false" text="%update" GridPane.columnIndex="1"/>
+         <Button fx:id="createButton" mnemonicParsing="false" text="%create" GridPane.columnIndex="2"/>
+      </GridPane>
+   </GridPane>
+</AnchorPane>

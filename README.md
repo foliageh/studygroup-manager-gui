@@ -2,8 +2,8 @@
 > ITMO Programming Course, lab work #8.  
 > Check out previous labs #5-7: [studygroup-manager](https://github.com/foliageh/studygroup-manager).
 
-**JavaFX GUI application (server + GUI client) for object collection management.**  
-JavaFX, internationalization.
+**Client-server application for object collection management with JavaFX.**  
+JavaFX, internationalization, Gradle.
 
 ![image](https://github.com/foliageh/studygroup-manager-gui/assets/46216950/21ef1e74-acff-4186-97f1-f1819c7c3e40)
 
